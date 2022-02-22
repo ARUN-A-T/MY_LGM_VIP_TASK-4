@@ -1,0 +1,116 @@
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+body
+{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height:99vh;
+  background:url(https://i.pinimg.com/564x/08/d0/b2/08d0b290715f28b4f737b465d531d6a6.jpg);
+  background-repeat: no-repeat;
+      background-size: cover;
+}
+.container
+{ 
+   color: aliceblue;
+    position: relative;
+    min-width: 300px;
+    min-height: 300px;
+    background-color: #333;
+    padding: 40;
+    border-radius: 20px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),10px 10px 70px rgba(0, 0, 0, 0.25),inset -5px -5px 15px rgba(0, 0, 0, 0.5),inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.calculator
+{
+    position: relative;
+    display: grid;
+}
+.calculator .value
+{
+    position: relative;
+    grid-column: span 4;
+    height:100px;
+    left: 10px;
+    width:calc(100% - 20px);
+    border: none;
+    outline:none;
+    background:#a7af7c;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+}
+.calculator span{
+  position: relative;
+  display: grid;
+  width: 80px;
+  height: 80px;
+  margin: 8px;
+  background:linear-gradient(180deg,#2f2f2f,#3f3f3f);
+  box-shadow:inset -8px 0px 8px rgba(0, 0, 0,0.15),inset  0 0 0 2px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+  place-items: center;
+}
+.calculator span i{
+  position: relative;
+  font-style: italic;
+  font-size: 1.5em;
+}
+.calculator span::before{
+  content: '';
+  position: absolute;
+  top:3px;
+  left:4px;
+  bottom: 14px;
+  right: 12px;
+  background:linear-gradient(90deg,#2d2d2d,#4d4d4d);
+  border-radius: 11px;
+  box-shadow: -5px -5px 15px rgba(0, 0, 0,0.1),10px 5px 10px rgba(0, 0, 0,0.15);
+  border-left:1px solid #0004;
+  border-bottom: 1px solid #0004;
+  border-top: 1px solid #0009;
+}
+.calculator span :active{
+  filter: brightness(2);
+}
+.calculator .clear{
+  grid-column: span 2;
+  width:170px;
+  background: #f00;
+ 
+}
+
+.calculator .clear::before{
+  background:linear-gradient(90deg,#d20000,#ffffff5c);
+  border-left:1px solid #fff4;
+  border-bottom: 1px solid #fff4;
+  border-top: 1px solid #fff4;
+}
+.calculator .plus{
+grid-row: span 2;
+height: 165px;
+}
+.calculator .equal{
+  background: #2196f3;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.calculator .equal::before{
+  background: linear-gradient(90deg,#1479c9,#ffffff5c);
+  border-left:1px solid #fff4;
+  border-bottom: 1px solid #fff4;
+  border-top: 1px solid #fff4;
+
+}
